@@ -17,13 +17,13 @@ body{
     display: grid;
 
 /* Se definen tres filas / tres columnas */
-    grid-template: 180px 1fr  60px / 10% auto 10%;
+    grid-template: 11.25rem 1fr  3.75rem / 10% auto 10%;
 
 /* Distribucion el contenido en cada fila */
     grid-template-areas: "above above above"
                          "left middle right"
                          "bottom bottom bottom";
-    gap: 35px
+    gap: 2.188rem
 }
 
 
@@ -42,17 +42,17 @@ width: 100%;
 font-size: 1.3rem;
 box-shadow: 0.625rem 0.313rem 0.313rem black; 
 }
-
+/*barra lateral izquierda*/
 .left{ grid-area:left;  background: #2193b0; 
     background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0); 
     background: linear-gradient(to right, #6dd5ed, #2193b0); 
-    
-}
+    }
+    /*barra lateral derecha*/
 .right{ grid-area:right; background: #2193b0;  
     background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0); 
     background: linear-gradient(to right, #6dd5ed, #2193b0); 
      }
-
+/*pie de la página*/
 .bottom{ grid-area: bottom;
 background: #141E30;  
 background: -webkit-linear-gradient(to right, #243B55, #141E30);

@@ -98,11 +98,11 @@ body {
   }
   /*Margen izquierdo para la primera columna del footer*/
   .column1 {
-    margin-left: 1rem;
+    margin-left:1rem;
   }
   /*Margen derecho para la última columna del footer*/
   .column5 {
-    margin-right: 1rem;
+    margin-right:1rem;
   }
   
   /*final del footer*/
