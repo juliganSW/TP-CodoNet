@@ -1,4 +1,7 @@
-body {
+
+
+
+/* body {
     background: #667db6;
     background: -webkit-linear-gradient(
       to right,
@@ -14,34 +17,43 @@ body {
       #0082c8,
       #667db6
     ); 
-  }
+  } */
   
-  header {
+  /* header {
     position: sticky;
     top: 0;
     z-index: 100;
-  }
+    
+    
+  } */
   
   /*barra de navegacion*/
-  .containerNav {
+  nav {
+    display: flex;
+    position:sticky;
+    top:0;
+    z-index: 100;
     margin-top: 1rem;
     width: 100%;
     height: 7.813rem;
-    display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    padding: 0 20px;
     background: #0f0c29;
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
     font-size: 1.2rem;
     color: aqua;
     box-shadow: 0.625rem 0.313rem 0.313rem black;
-  }
+    }
+
   /*lista del menú de navegacion*/
+ 
   ul {
+    display: flex;
     margin: 0rem;
     padding: 6.25rem;
-    display: flex;
+   
   }
   
   ul li {
@@ -57,26 +69,32 @@ body {
   ul li a:hover {
     color: white;
   }
+
+  
+  
   /*logo Codo-Net*/
   .logo {
+    margin-left: -8rem;
+    width:20rem;
     cursor: pointer;
     transition: 1s;/*esto junto con la clase de abajo hace que el logo cambie de tamaño*/
   }
+
   /*Esto hace que el logo cambie de tamaño al pasar el mouse*/
   .logo:hover {
     transform: scale(1.1);
     transition: 1s;
   }
+
   /*contenido principal de la página*/
   .principal {
     margin-top: 5rem;
   }
-
-
-
   
-  
-  /*contenedor del footer*/
+ 
+
+
+/*contenedor del footer*/
   .footContainer {
     background: #141e30;
     background: -webkit-linear-gradient(to right, #243b55, #141e30);
@@ -139,125 +157,62 @@ body {
   .app {
     margin-top:4rem;
   }
-
-/* carrusel*/
-.slide {
-    position: relative;
-    box-shadow: 0px 1px 6px #000000a3;
-    margin-top: 26px;
-    
-    
-}
-.slide-inner {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: calc( 394px + 3rem);
-    
-}
-.slide-open:checked + .slide-item {
-    position: static;
-    opacity: 100;
-}
-.slide-item {
-    position: absolute;
-    opacity: 0;
-    -webkit-transition: opacity 0.6s ease-out;
-    transition: opacity 0.6s ease-out;
-}
-.slide-item img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-}
-.slide-control {
-    background: rgba(0, 0, 0, 0.28);
-    border-radius: 50%;
-    color: #fff;
-    cursor: pointer;
-    display: none;
-    font-size: 40px;
-    height: 40px;
-    line-height: 35px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    cursor: pointer;
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    text-align: center;
-    width: 40px;
-    z-index: 10;
-}
-.slide-control.prev {
-    left: 2%;
-}
-.slide-control.next {
-    right: 2%;
-}
-.slide-control:hover {
-    background: rgba(0, 0, 0, 0.8);
-    color: #aaaaaa;
-}
-#slide-1:checked ~ .control-1,
-#slide-2:checked ~ .control-2,
-#slide-3:checked ~ .control-3,
-#slide-4:checked ~ .control-4,
-#slide-5:checked ~ .control-5{
-    display: block;
-}
-/* .slide-indicador {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 2%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 10;
-}
-.slide-indicador li {
-    display: inline-block;
-    margin: 0 5px;
-} */
-.slide-circulo {
-    color: #828282;
-    cursor: pointer;
-    display: block;
-    font-size: 35px;
-}
-.slide-circulo:hover {
-    color: #aaaaaa;
-}
-#slide-1:checked ~ .control-1 ~ .slide-indicador 
-     li:nth-child(1) .slide-circulo,
-#slide-2:checked ~ .control-2 ~ .slide-indicador 
-      li:nth-child(2) .slide-circulo,
-#slide-3:checked ~ .control-3 ~ .slide-indicador 
-      li:nth-child(3) .slide-circulo 
-#slide-4:checked ~ .control-4 ~ .slide-indicador 
-      li:nth-child(4) .slide-circulo
-#slide-5:checked ~ .control-5 ~ .slide-indicador 
-      li:nth-child(5) .slide-circulo{
-    color: #428bca;
-}
-/* #titulo {
-    width: 100%;
-    position: absolute;
-    padding: 0px;
-    margin: 0px auto;
-    text-align: center;
-    font-size: 27px;
-    color: rgba(255, 255, 255, 1);
-    font-family: 'Open Sans', sans-serif;
-    z-index: 9999;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
-         -1px 0px 2px rgba(255, 255, 255, 0);
-} */
-
-
   
+ 
+
+/*ultimo carrusel sin bootstrap que funciona y es automático*/
+.slider-frame {
+	width: 100%;
+  height: auto;
+	margin:30px auto 0;
+  overflow: hidden;
+  }
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: slide 15s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+  }
+
+.slider-frame img {
+	width: 100%;
+  border-radius: 10px;
+  box-shadow: 0.313rem 0.313rem 0.313rem  #ffffffcc;
+  }
+  /*Un @keyframe es una regla en CSS que define los estilos específico
+  de un elemento en diferentes momentos de una animación.
+  En una animación CSS, se especifican una serie de fotogramas clave (keyframes)
+  que describen cómo debe cambiar el aspecto del elemento 
+  en diferentes momentos de la animación. */
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+  
+}
+.downloadApp{
+  width: 1708px;
+  height: 562px;
+  background-color: #0082c8;
+
+}
+
+
+
 
 
   
