@@ -2,7 +2,7 @@ body {
   background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
-/*Esto está comentado porque era el fondo anterior, ahora esta con background de prueba oscuro*/
+/*Esto está comentado porque era el fondo anterior, ahora está con background de prueba oscuro*/
 /* body {
     background: #667db6;
     background: -webkit-linear-gradient(
@@ -21,8 +21,6 @@ body {
     ); 
   } */
 
-
-
 /*barra de navegacion*/
 nav {
   display: flex;
@@ -35,16 +33,17 @@ nav {
   justify-content: space-around;
   align-items: center;
   padding: 0 20px;
+  
   background: #0f0c29;
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+  
   font-size: 1.2rem;
   color: aqua;
-  box-shadow: 0.625rem 0.313rem 0.313rem black;
+  box-shadow: 0.625rem 0.313rem 0.313rem #000000;
 }
 
 /*lista del menú de navegacion*/
-
 ul {
   display: flex;
   margin: 0rem;
@@ -69,187 +68,6 @@ ul li a:hover {
 .logo {
   margin-left: -8rem;
   width: 20rem;
-}
-
-/*contenido de la página en donde estan las ilustraciones*/
-.grid-container {
-  display: grid;
-  grid-template: 4.25rem 20rem / 1fr 1fr 1fr;
-  grid-template-areas:
-    "above above above"
-    "left center right";
- gap: 25px;
- margin:10px;
-  
-} 
-.grid-item{
-  display: flex;
-  justify-content: center;
-  margin-top: 0.5rem;
-}
-
-.above {
-  grid-area: above;
-  background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
-  text-align: center;
-  color:white;
-  text-shadow:black 0.1em 0.1em 0.1em;
-  box-shadow: 0.625rem 0.313rem 0.313rem black;
-}
-  
-.left {/*estilos de la ilustracion de la izquierda*/
-  grid-area: left;
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
-  text-align: center;
-  text-shadow:whitesmoke 0.1em 0.1em 0.1em;
-  box-shadow: 0.425rem 0.213rem 0.213rem rgba(255, 255, 255, 0.378);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s; /*esto junto con la clase de abajo hace la imagen cambie de tamaño*/
-  }
-
-  .left:hover{/*con el hover cambia de color la imagen al pasar con el mouse*/
-    background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
-    transform: scale(1.1);
-    transition: 1s;
-  }
-   
-  .center {/*estilos de la ilustracion del centro*/
-  grid-area: center;
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
-  text-align: center;
-  text-shadow:whitesmoke 0.1em 0.1em 0.1em;
-  box-shadow: 0.425rem 0.213rem 0.213rem rgba(255, 255, 255, 0.378);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s; /*esto junto con la clase de abajo hace la imagen cambie de tamaño*/
-  }
-
- .center:hover{
-  background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
-    transform: scale(1.1);
-    transition: 1s;
-}
-
-.right {/*estilos de la ilustracion de la derecha*/
-  grid-area: right;
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
-  text-align: center;
-  text-shadow:whitesmoke 0.1em 0.1em 0.1em;
-  box-shadow: 0.425rem 0.213rem 0.213rem rgba(255, 255, 255, 0.378);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s; /*esto junto con la clase de abajo hace la imagen cambie de tamaño*/
-} 
-
-.right:hover{
-  background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
-  transform: scale(1.1);
-  transition: 1s;
-}
-
-/* Este el es grid debajo de las ilustraciones , en donde está el aviso */
-/*en donde está el aviso del 5G*/
-.grid-advert{
-  display:grid;
-  margin:auto auto 10px auto;
-  align-items: center;
-  text-align: center;
-  grid-template-columns: 1fr 1fr auto;
-  width:980px;
-  height: 400px;
-   background-image: linear-gradient( 65.9deg,  rgba(85,228,224,1) 5.5%, rgba(75,68,224,0.74) 54.2%, rgba(64,198,238,1) 55.2%, rgba(177,36,224,1) 98.4% );
-   color:white;
-  border-radius: 20px;
-  font-family: 'Gugi', cursive;
-  font-family: 'Lilita One', cursive;
-} 
-
-/*Acá estan simplemente los tamaños y la alineacion de la fuente del anuncio*/
-.grid-advert h1{
-  font-size: 8rem;
-  text-align: start;
-}
-.grid-advert h2{
-  font-size: 3rem;
-}
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-/*contenedor del footer*/
-.footContainer {
-  background: #141e30;
-  background: -webkit-linear-gradient(to right, #243b55, #141e30);
-  background: linear-gradient(to right, #243b55, #141e30);
-  display: grid;
-  grid-template-columns: 13.125rem 1fr 1fr 13.75rem 2fr;
-  justify-content: start;
-  gap: 6.25rem;
-  color: white;
-}
-
-/*Estilos del footer*/
-footer {
-  background: #141e30;
-  background: -webkit-linear-gradient(to right, #243b55e9, #141e30);
-  background: linear-gradient(to right, #243b55ea, #141e30);
-  color: white;
-}
-
-/*logo en el footer*/
-.footerLogo {
-  margin-top: -1.8rem;
-  margin-left: -5.5rem;
-}
-/*Margen izquierdo para la primera columna del footer*/
-.column1 {
-  margin-left: 1rem;
-}
-/*Margen derecho para la última columna del footer*/
-.column5 {
-  margin-right: 1.5rem;
-}
-
-/*final del footer*/
-.copyright {
-  display: flex;
-  justify-content: center;
-}
-
-/*íconos de las redes sociales en el footer*/
-.fa-brands {
-  margin-top: 1rem;
-  padding: 0.313rem;
-}
-.fa-brands.fa-instagram.fa-2xl:hover {
-  color: #e1306c;
-}
-.fa-brands.fa-facebook.fa-2xl:hover {
-  color: #3b5998;
-}
-.fa-brands.fa-whatsapp.fa-2xl:hover {
-  color: #00bb2d;
-}
-.fa-brands.fa-twitter.fa-2xl:hover {
-  color: #00acee;
-}
-
-/*opciones de descarga de app en footer*/
-.app {
-  margin-top: 4rem;
 }
 
 /*ultimo carrusel sin bootstrap que funciona y es automático*/
@@ -277,6 +95,7 @@ footer {
   border-radius: 10px;
   box-shadow: 0.313rem 0.313rem 0.313rem #ffffffcc;
 }
+
 /*Un @keyframe es una regla en CSS que define los estilos específicos
   de un elemento en diferentes momentos de una animación.
   En una animación CSS, se especifican una serie de fotogramas clave (keyframes)
@@ -311,8 +130,215 @@ footer {
     margin-left: -300%;
   }
 }
+/*banner final del carrusel. Ideal ajustar las imagenes a 1708px x 562px
+ o el equivalente en rem*/
 .downloadApp {
   width: 1708px;
   height: 562px;
   background-color: #0082c8;
 }
+
+
+/*contenido de la página en donde estan las ilustraciones*/
+.grid-container {
+  display: grid;
+  grid-template: 4.25rem 20rem / 1fr 1fr 1fr;
+  grid-template-areas:
+    "above above above"
+    "left center right";
+ gap: 25px;
+ margin:10px;
+  
+} 
+.grid-item{
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+/* Este es el cartelito que dice "conocé nuestras opciones"*/
+.above {
+  grid-area: above;
+  background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+  text-align: center;
+  color:rgba(255, 255, 255, 0.987);
+  text-shadow:black 0.1em 0.1em 0.1em;
+  box-shadow: 0.625rem 0.313rem 0.313rem black;
+  opacity: .6;
+}
+  
+.left {/*estilos de la ilustracion de la izquierda*/
+  grid-area: left;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
+  text-align: center;
+  text-shadow:whitesmoke 0.1em 0.1em 0.1em;
+  box-shadow: 0.425rem 0.213rem 0.213rem rgba(255, 255, 255, 0.378);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s; /*esto junto con la clase de abajo hace la imagen cambie de tamaño*/
+  }
+
+  .left:hover{/*con el hover cambia de color la imagen al pasar con el mouse*/
+    background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+    transform: scale(1.1);
+    transition: 1s;
+  }
+   
+  .center {/*estilos de la ilustracion del centro*/
+  grid-area: center;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
+  text-align: center;
+  text-shadow:whitesmoke 0.1em 0.1em 0.1em;
+  box-shadow: 0.425rem 0.213rem 0.213rem rgba(255, 255, 255, 0.378);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s; /*esto junto con la clase de abajo hace la imagen cambie de tamaño*/
+  }
+
+ .center:hover{
+  background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.right {/*estilos de la ilustracion de la derecha*/
+  grid-area: right;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
+  text-align: center;
+  text-shadow:whitesmoke 0.1em 0.1em 0.1em;
+  box-shadow: 0.425rem 0.213rem 0.213rem rgba(255, 255, 255, 0.378);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s; /*esto junto con la clase de abajo hace la imagen cambie de tamaño*/
+} 
+
+.right:hover{
+  background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+/* Este el es grid debajo de las ilustraciones , en donde está el aviso */
+/*en donde está el aviso del 5G*/
+.grid-advert{
+  display:grid;
+  margin:20px auto 20px auto;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: 1fr 1fr auto;
+  width:90%;
+  height: 400px;
+  background-image: linear-gradient( 65.9deg,  rgba(85,228,224,1) 5.5%, rgba(75,68,224,0.74) 54.2%, rgba(64,198,238,1) 55.2%, rgba(177,36,224,1) 98.4% );
+  color:white;
+  -webkit-text-stroke: 2px black;/*le agrega un borde al texto*/
+  border-radius: 20px;
+  
+  font-family: 'Lilita One', cursive;
+  opacity: .8;
+} 
+
+/*Acá estan simplemente los tamaños y la alineacion de la fuente del anuncio del 5G*/
+.grid-advert h1{
+  font-size: 8rem;
+  text-align: start;
+}
+.grid-advert h2{
+  font-size: 3rem;
+}
+
+/*cartelito de descarga de la app*/
+.grid-app{
+  display: grid;
+  margin:20px auto 20px auto;
+  background-color: #00DBDE;
+  background-color: #00DBDE;
+  background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+ color:white;
+ align-items: center;
+text-align: center;
+grid-template-columns: 1fr auto auto;
+width:90%;
+height: 250px;
+border-radius: 20px;
+opacity:.8;
+}
+.grid-app img{
+  border-radius: 30px;
+  }
+.grid-app h1, h2 {
+    font-family: 'Lilita One', cursive;
+    -webkit-text-stroke: 1px black;/*le agrega un borde al texto*/
+  }
+
+
+  /*contenedor del footer*/
+.footContainer {
+  background: #141e30;
+  background: -webkit-linear-gradient(to right, #243b55, #141e30);
+  background: linear-gradient(to right, #243b55, #141e30);
+  display: grid;
+  grid-template-columns: 13.125rem 1fr 1fr 13.75rem 2fr;
+  justify-content: start;
+  gap: 6.25rem;
+  color: white;
+}
+
+/*Estilos del footer*/
+footer {
+  background: #141e30;
+  background: -webkit-linear-gradient(to right, #243b55e9, #141e30);
+  background: linear-gradient(to right, #243b55ea, #141e30);
+  color: white;
+}
+
+/*logo en el footer*/
+.footerLogo {
+  margin-top: -1.8rem;
+  margin-left: -5.5rem;
+}
+/*Margen izquierdo para la primera columna del footer*/
+.column1 {
+  margin-left: 1rem;
+}
+/*Margen derecho para la última columna del footer*/
+.column5 {
+  margin-right: 1.5rem;
+}
+
+
+/*línea al final del footer*/
+.line {
+  border-top: 0.063rem solid white;
+  height: 0.125rem;
+  padding: 0;
+  margin: 0.125rem auto 0 auto;
+  }
+
+/*final del footer*/
+.copyright {
+  display: flex;
+  justify-content: center;
+}
+
+/*íconos de las redes sociales en el footer*/
+.fa-brands {
+  margin-top: 1rem;
+  padding: 0.313rem;
+}
+.fa-brands.fa-instagram.fa-2xl:hover {
+  color: #e1306c;
+}
+.fa-brands.fa-facebook.fa-2xl:hover {
+  color: #3b5998;
+}
+.fa-brands.fa-whatsapp.fa-2xl:hover {
+  color: #00bb2d;
+}
+.fa-brands.fa-twitter.fa-2xl:hover {
+  color: #00acee;
+}
+
+/*opciones de descarga de app en footer*/
+.app {
+  margin-top: 4rem;
+}
+
