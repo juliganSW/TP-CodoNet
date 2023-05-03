@@ -21,6 +21,32 @@ body {
     ); 
   } */
 
+  /*Efecto typing en el comienzo de la página*/
+  h5 {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2rem;
+    margin: 0 auto;
+    
+    border-right: 0.15em solid #18bdec;
+    animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 30%;
+    }
+  }
+  @keyframes blink {
+    0% {
+      border-color: transparent;
+    }
+  }
+/**************************************************************************/
+
 /*barra de navegacion*/
 nav {
   display: flex;
@@ -43,8 +69,7 @@ nav {
   color: aqua;
   box-shadow: 0.625rem 0.313rem 0.313rem #000000;
 }
-
-
+/*********************************************************************************/
 
 /*lista del menú de navegacion*/
 ul {
@@ -72,9 +97,9 @@ ul li a:hover {
   margin-left: -8rem;
   width: 20rem;
 }
+/*****************************************************************************/
 
-
-/*ultimo carrusel sin bootstrap que funciona y es automático*/
+/*carrusel sin bootstrap que funciona y es automático*/
 .slider-frame {
   width: 100%;
   height: auto;
@@ -134,13 +159,13 @@ ul li a:hover {
     margin-left: -300%;
   }
 }
-
+/*************************************************************************************/
 
 /*banner final del carrusel. Ideal ajustar las imagenes a 1708px x 562px
  o el equivalente en rem*/
 .downloadApp {
-  width: 1708px;
-  height: 562px;
+  width: 106.75rem;
+  height: 35.125rem;
   background-color: #0082c8;
 }
 
@@ -301,6 +326,8 @@ opacity:.8;
   .grid-sim img{
     border-radius: 30px;
     }
+
+    
     
       
       
