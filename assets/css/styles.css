@@ -1,7 +1,7 @@
-body{
+body {
   background-image: linear-gradient(to right, #434343 0%, black 100%);
   scroll-snap-type: y mandatory;
-} 
+}
 
 /*Esto está comentado porque era el fondo anterior, ahora está con background de prueba oscuro*/
 /* body {
@@ -22,60 +22,55 @@ body{
     ); 
   } */
 
-  
-  
-
 /* cabecera con barra de navegacion*/
-header{
-  position:sticky;
-  top:0;
-  left:0;
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
   z-index: 100;
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background-image: linear-gradient(to right, #434343 0%, #000000 100%);
   scroll-snap-align: start;
-     }
+}
 
-  /*Efecto typing en el comienzo de la página*/
-     .welcome {
-      width: 0;
-      overflow: hidden;
-      white-space: nowrap;
-      font-size: 2rem;
-      margin: 0 auto;
-      
-      border-right: 0.15em solid #18bdec;
-      animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
-    }
-    @keyframes typing {
-      from {
-        width: 0;
-      }
-      to {
-        width: 30%;
-      }
-    }
-    @keyframes blink {
-      0% {
-        border-color: transparent;
-      }
-    }
+/*Efecto typing en el comienzo de la página*/
+.title {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  margin: 0 auto;
 
-  /*barra de navegacion*/
-  nav {
+  border-right: 0.15em solid #18bdec;
+  animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 35%;
+  }
+}
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+}
+
+/*barra de navegacion*/
+nav {
   display: flex;
-  
   width: 100%;
   height: 6.5rem; /*anterior era 7.813rem*/
   justify-content: space-around;
   align-items: center;
   padding: 0 20px;
-  
   background: #0f0c29;
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
-  
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+
   font-size: 1.2rem;
-  color: aqua;
+  color: #00ffff;
   box-shadow: 0.625rem 0.313rem 0.313rem #000000;
 }
 /*********************************************************************************/
@@ -93,12 +88,12 @@ ul li {
 }
 
 ul li a {
-  color: aqua;
+  color: #00ffff;
   text-decoration: none;
 }
 
 ul li a:hover {
-  color: white;
+  color: #ffffff;
 }
 
 /*logo Codo-Net*/
@@ -106,8 +101,65 @@ ul li a:hover {
   margin-left: -8rem;
   width: 20rem;
 }
-/*****************************************************************************/
 
+nav input[type="checkbox"] {
+  display: none;
+}
+
+nav label {
+  display: none;
+  cursor: pointer;
+}
+
+/*queries para pantallas pequeñas*/
+@media only screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    padding: 1rem;
+    box-shadow: 0 2px 5px #00000033;
+  }
+
+  nav li {
+    margin: 0;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav label {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+  .title {
+    display: none;
+  }
+}
+/*****************************************************************************/
 /*carrusel sin bootstrap que funciona y es automático*/
 .slider-frame {
   width: 100%;
@@ -185,11 +237,10 @@ ul li a:hover {
   grid-template-areas:
     "above above above"
     "left center right";
- gap: 25px;
- margin:10px;
-  
-} 
-.grid-item{
+  gap: 25px;
+  margin: 10px;
+}
+.grid-item {
   display: flex;
   justify-content: center;
   margin-top: 0.5rem;
@@ -198,145 +249,199 @@ ul li a:hover {
 /* Este es el cartelito que dice "conocé nuestras opciones"*/
 .above {
   grid-area: above;
-  background-image: linear-gradient( 76.3deg,  #2c3e4e 12.6%, #456783 82.8% );
+  background-image: linear-gradient(76.3deg, #2c3e4e 12.6%, #456783 82.8%);
   text-align: center;
-  color:#fffffffc;
-  text-shadow:#000000 0.1em 0.1em 0.1em;
+  color: #fffffffc;
+  text-shadow: #000000 0.1em 0.1em 0.1em;
   box-shadow: 0.625rem 0.313rem 0.313rem #000000;
-  opacity: .6;
-  }
-  .above h2{
-    font-size: 2.5rem;
+  opacity: 0.6;
+}
+.above h2 {
+  font-size: 2.5rem;
+}
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 0.5fr;
   }
 
-.left {/*estilos de la ilustracion de la izquierda*/
+  .above h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.left {
+  /*estilos de la ilustracion de la izquierda*/
   grid-area: left;
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    #eaf9f9ab 0.1%,
+    #eff9fba1 90.1%
+  );
   text-align: center;
-  text-shadow:whitesmoke 0.1em 0.1em 0.1em;
-  box-shadow: 0.425rem 0.213rem 0.213rem rgba(255, 255, 255, 0.378);
+  text-shadow: whitesmoke 0.1em 0.1em 0.1em;
+  box-shadow: 0.425rem 0.213rem 0.213rem #ffffff60;
   border-radius: 10px;
   cursor: pointer;
   transition: 1s; /*esto junto con la clase de abajo hace la imagen cambie de tamaño*/
-  }
+}
 
-  .left:hover{/*con el hover cambia de color la imagen al pasar con el mouse*/
-    background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
-    transform: scale(1.1);
-    transition: 1s;
-  }
-   
-  .center {/*estilos de la ilustracion del centro*/
-  grid-area: center;
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
-  text-align: center;
-  text-shadow:whitesmoke 0.1em 0.1em 0.1em;
-  box-shadow: 0.425rem 0.213rem 0.213rem rgba(255, 255, 255, 0.378);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s; /*esto junto con la clase de abajo hace la imagen cambie de tamaño*/
-  }
-
- .center:hover{
-  background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+.left:hover {
+  /*con el hover cambia de color la imagen al pasar con el mouse*/
+  background-image: linear-gradient(
+    76.3deg,
+    rgba(44, 62, 78, 1) 12.6%,
+    rgba(69, 103, 131, 1) 82.8%
+  );
   transform: scale(1.1);
   transition: 1s;
 }
 
-.right {/*estilos de la ilustracion de la derecha*/
-  grid-area: right;
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
+.center {
+  /*estilos de la ilustracion del centro*/
+  grid-area: center;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(234, 249, 249, 0.67) 0.1%,
+    rgba(239, 249, 251, 0.63) 90.1%
+  );
   text-align: center;
-  text-shadow:whitesmoke 0.1em 0.1em 0.1em;
+  text-shadow: whitesmoke 0.1em 0.1em 0.1em;
   box-shadow: 0.425rem 0.213rem 0.213rem rgba(255, 255, 255, 0.378);
   border-radius: 10px;
   cursor: pointer;
   transition: 1s; /*esto junto con la clase de abajo hace la imagen cambie de tamaño*/
-} 
+}
 
-.right:hover{
-  background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+.center:hover {
+  background-image: linear-gradient(
+    76.3deg,
+    rgba(44, 62, 78, 1) 12.6%,
+    rgba(69, 103, 131, 1) 82.8%
+  );
   transform: scale(1.1);
   transition: 1s;
+}
+
+.right {
+  /*estilos de la ilustracion de la derecha*/
+  grid-area: right;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(234, 249, 249, 0.67) 0.1%,
+    rgba(239, 249, 251, 0.63) 90.1%
+  );
+  text-align: center;
+  text-shadow: whitesmoke 0.1em 0.1em 0.1em;
+  box-shadow: 0.425rem 0.213rem 0.213rem rgba(255, 255, 255, 0.378);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s; /*esto junto con la clase de abajo hace la imagen cambie de tamaño*/
+}
+
+.right:hover {
+  background-image: linear-gradient(
+    76.3deg,
+    rgba(44, 62, 78, 1) 12.6%,
+    rgba(69, 103, 131, 1) 82.8%
+  );
+  transform: scale(1.1);
+  transition: 1s;
+}
+/*queries para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    display: block;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 /***************************************************************************************************/
-
 /* Este el es grid debajo de las ilustraciones , en donde está el aviso */
 /*en donde está el aviso del 5G*/
-.grid-advert{
-  display:grid;
-  margin:20px auto 20px auto;
+.grid-advert {
+  display: grid;
+  margin: 20px auto 20px auto;
   align-items: center;
   text-align: center;
   grid-template-columns: 1fr 1fr auto;
-  width:90%;
+  width: 90%;
   height: 400px;
-  background-image: linear-gradient( 65.9deg,  rgba(85,228,224,1) 5.5%, rgba(75,68,224,0.74) 54.2%, rgba(64,198,238,1) 55.2%, rgba(177,36,224,1) 98.4% );
-  color:white;
-  -webkit-text-stroke: 2px black;/*le agrega un borde al texto*/
+  background-image: linear-gradient(
+    65.9deg,
+    rgba(85, 228, 224, 1) 5.5%,
+    rgba(75, 68, 224, 0.74) 54.2%,
+    rgba(64, 198, 238, 1) 55.2%,
+    rgba(177, 36, 224, 1) 98.4%
+  );
+  color: white;
+  -webkit-text-stroke: 2px black; /*le agrega un borde al texto*/
   border-radius: 20px;
- font-family: 'Lilita One', cursive;
-  opacity: .8;
-} 
+  font-family: "Lilita One", cursive;
+  opacity: 0.8;
+}
 
 /*Acá estan simplemente los tamaños y la alineacion de la fuente del anuncio del 5G*/
-.grid-advert h1{
+.grid-advert h1 {
   font-size: 8rem;
   text-align: start;
 }
-.grid-advert h2{
+.grid-advert h2 {
   font-size: 3rem;
 }
-.wifi-icon{
+.wifi-icon {
   rotate: 90deg;
 }
 /***********************************************************************************************/
 
 /*cartelito de descarga de la app*/
-.grid-app{
+.grid-app {
   display: grid;
-  margin:20px auto 20px auto;
-  background-color: #00DBDE;
-  background-color: #00DBDE;
-  background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
- color:white;
- -webkit-text-stroke: 1px black;/*le agrega un borde al texto*/
- align-items: center;
-text-align: center;
-grid-template-columns: 1fr auto auto;
-width:90%;
-height: 250px;
-border-radius: 20px;
-font-family: 'Lilita One', cursive;
-opacity:.8;
+  margin: 20px auto 20px auto;
+  background-color: #00dbde;
+  background-color: #00dbde;
+  background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  color: white;
+  -webkit-text-stroke: 1px black; /*le agrega un borde al texto*/
+  align-items: center;
+  text-align: center;
+  grid-template-columns: 1fr auto auto;
+  width: 90%;
+  height: 250px;
+  border-radius: 20px;
+  font-family: "Lilita One", cursive;
+  opacity: 0.8;
 }
-.grid-app img{
+.grid-app img {
   border-radius: 30px;
-  }
+}
 /**********************************************************************************************/
 
 /*aviso que dice "pedí tu chip"*/
-  .grid-sim{
-    display: grid;
-    margin:20px auto 20px auto;
-    background-image: url(../img/fondo-papel-tapiz-colorido-borroso-vivo.jpg);
-   color:#ffffff;
-   -webkit-text-stroke: 1px black;/*le agrega un borde al texto*/
-   align-items: center;
+.grid-sim {
+  display: grid;
+  margin: 20px auto 20px auto;
+  background-image: url(../img/fondo-papel-tapiz-colorido-borroso-vivo.jpg);
+  color: #ffffff;
+  -webkit-text-stroke: 1px black; /*le agrega un borde al texto*/
+  align-items: center;
   text-align: center;
   grid-template-columns: 1fr auto auto;
-  width:90%;
+  width: 90%;
   height: 250px;
   border-radius: 20px;
-  font-family: 'Lilita One', cursive;
-  opacity:.8;
-  }
-  .grid-sim img{
-    border-radius: 30px;
-    }
-    /****************************************************************************************/
+  font-family: "Lilita One", cursive;
+  opacity: 0.8;
+}
+.grid-sim img {
+  border-radius: 30px;
+}
+/****************************************************************************************/
 
-     /*contenedor del footer*/
+/*contenedor del footer*/
 .footContainer {
   background: #141e30;
   background: -webkit-linear-gradient(to right, #243b55, #141e30);
@@ -345,8 +450,8 @@ opacity:.8;
   grid-template-columns: 13.125rem 1fr 1fr 13.75rem 2fr;
   justify-content: start;
   gap: 6.25rem;
-  color: white;
-  width: 100%
+  color: #ffffff;
+  width: 100%;
 }
 
 /*Estilos del footer*/
@@ -363,14 +468,13 @@ footer {
   margin-left: -5.5rem;
 }
 /*Margen izquierdo para la primera columna del footer*/
-.col1 {
+.group1 {
   margin-left: 1rem;
 }
 /*Margen derecho para la última columna del footer*/
-.col5 {
-  margin-right: 1.5rem;
+.group2 {
+  margin-right: 1rem;
 }
-
 
 /*línea al final del footer*/
 .line {
@@ -378,7 +482,7 @@ footer {
   height: 0.125rem;
   padding: 0;
   margin: 0.125rem auto 0 auto;
-  }
+}
 
 /*final del footer*/
 .copyright {
@@ -408,33 +512,8 @@ footer {
 .app {
   margin-top: 4rem;
 }
-/****************************************************************************************/
-
-/*Ajuste de los media queries sin terminar/*
-/*Estilos para pantallas pequeñas*/ 
-
-@media only screen and (max-width: 600px) {
-  
-  nav{
-    flex-direction: column;
-    justify-content: center;
-    height: auto;
-    padding: 1rem;
-  }
-  ul {
-    padding: 0;
-    margin: 1rem 0;
-    flex-direction: column;
-  }
-  ul li {
-    margin: 1rem 0;
-    text-align: center;
-  }
-  .logo {
-    margin-left: 0;
-    margin-bottom: 1rem;
-  }
-  
+/*queries para pantallas pequeñas*/
+@media only screen and (max-width: 768px) {
   .footContainer {
     display: flex;
     flex-wrap: wrap;
@@ -442,49 +521,53 @@ footer {
     align-items: center;
     padding: 30px 10px;
   }
-  
-  .col1 {
+
+  .group1 {
     text-align: center;
     margin-bottom: 20px;
   }
-  
-  .col1 img {
+
+  .group1 img {
     width: 100%;
     max-width: 300px;
     height: auto;
     margin-bottom: 20px;
   }
-  
-  .col2,.col3,.col4,.col5 {
+
+  .group2,
+  .group3,
+  .group4,
+  .group5 {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
   }
-  
-  .col5 .app {
+
+  .group5 .app {
     margin-top: 20px;
   }
-  
-  .col5 .qrCode {
+
+  .group5 .qrCode {
     text-align: center;
     margin-top: 20px;
   }
-  
+
   .line {
     margin: 30px 0;
   }
-  
+
   .copyright {
     text-align: center;
   }
 }
-  
- 
 
+/****************************************************************************************/
 
-@media only screen and (min-width: 600) {
+/*Ajuste de los media queries sin terminar/*
+
+/*@media only screen and (min-width: 600px) {
   /* estilos para pantallas medianas */
-  .footContainer {
+/* .footContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -529,13 +612,4 @@ footer {
   }
 }
 
-
-
-@media only screen and (min-width: 768px) {
-  /* estilos para pantallas grandes */
-}
-
-@media only screen and (min-width: 1200px) {
-  /* estilos para pantallas extra grandes */
-}
-
+  */
