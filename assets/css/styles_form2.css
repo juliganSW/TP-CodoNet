@@ -8,44 +8,113 @@ body{
     background-image: linear-gradient(to right, #434343 0%, black 100%);
     }
 
-.containerNav{
-    width: 100%;
-    display: flex;
-    align-content:space-between;
-    color:aqua;
+    header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      background-image: linear-gradient(to right, #434343 0%, #000000 100%);
+      scroll-snap-align: start;
+    }
+    nav {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      display: flex;
+      width: 100%;
+      height: 6.5rem; /*anterior era 7.813rem*/
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 1.25rem;
+      background: #0f0c29;
+      background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+      background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
     
+      font-size: 1.2rem;
+      color: #00ffff;
+      box-shadow: 0.625rem 0.313rem 0.313rem #000000;
     }
-
-    /*Lista de elementos dentro de la barra de navegacion*/
-ul{
-    margin: 0px;
-    padding: 70px;
-    display:flex;
-    justify-content: end;
+    ul {
+      display: flex;
+      margin: 0rem;
+      padding: 6.25rem;
     }
-
-ul li {
-    list-style: none;
-    margin: 0 25px;
+    
+    ul li {
+      list-style: none;
+      margin: 0 1.563rem;
+    }
+    
+    ul li a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    
+    ul li a:hover {
+      color: #ffffff;
+    }
+    /*logo Codo-Net*/
+.logo {
+  margin-left:-8rem;
+  width: 20rem;
 }
 
-ul li a {
-    color: aqua;
-    text-decoration: none;
+
+nav input[type="checkbox"] {
+  display: none;
 }
 
-ul li a:hover{
-    color: white;
- }
+nav label {
+  display: none;
+  cursor: pointer;
+}
+/*queries para pantallas pequeñas*/
+@media only screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    padding: 1rem;
+    box-shadow: 0 0.125 0.313 #00000033;
+  }
 
-.logo{
-    margin-top: 1rem;
-    margin-left:-22rem;
-    width: 20rem;
-    }
+  nav li {
+    margin: 0;
+    text-align: center;
+  }
 
+  nav a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
 
+  input[type="checkbox"]:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+  }
 
+  nav label {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+  .title {
+    display: none;
+  }
+}
 
 /* Contenedor grid */
 /* configuración para dispositivos de mayor tamaño     */
@@ -54,7 +123,7 @@ ul li a:hover{
     display: grid;
 
 /* Se definen tres filas / tres columnas */
-    grid-template: 10.25rem 1fr  3.75rem / 5% auto 5%;
+    grid-template: 3.75rem 1fr  3.75rem / 5% auto 5%;
 
 /* Distribucion el contenido en cada fila */
     grid-template-areas: "above above above"
@@ -66,92 +135,33 @@ ul li a:hover{
 
 /*Nombre y color de cada area del grid */
 
-.above { grid-area: above;   background: #0f0c29;
-background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-height: 6.5rem;
-margin-top: 1rem;              
-position:sticky;
-top:0;
-display: flex;
-align-items: center;
-justify-content:space-around;
-width: 100%;
-font-size: 1.3rem;
-box-shadow: 0.625rem 0.313rem 0.313rem #000000; 
-}
-
-nav input[type="checkbox"] {
-    display: none;
+.above{grid-area:above; 
+  background-image: linear-gradient( 76.3deg,  #2c3e4e 12.6%, #456783 82.8% );
+  
+  }
+  .above{
+    text-align: center;
+    color: #fffffffc;
+    text-shadow: #000000 0.1em 0.1em 0.1em;
+    box-shadow: 0.625rem 0.313rem 0.313rem #000000;
+    
+  }
+  .above h2 {
+    font-size: 3rem;
   }
   
-  nav label {
-    display: none;
-    cursor: pointer;
-  }
-  
-  @media only screen and (max-width: 768px) {
-    nav ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-    background: #0f0c29;
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    padding: 1rem;
-    box-shadow: 0 2px 5px #00000033;
-    }
-  
-    nav li {
-      margin: 0;
-      text-align: center;
-    }
-  
-    nav a {
-      display: block;
-      font-size: 1.2rem;
-      padding: 0.5rem 0;
-    }
-    
-  
-    input[type="checkbox"]:checked ~ ul {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    nav label {
-      display: block;
-      font-size: 2rem;
-      cursor: pointer;
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      z-index: 1;
-    }
-  
-    .fa-bars {
-      display: block;
-    
-    }
-}
 
 /* color de la fuente del área del medio*/
 .middle{
     color:#7fffd4;
 }
 /*barra lateral izquierda*/
-  .left{ grid-area:left;  /*background: #2193b0; 
-    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0); 
-    background: linear-gradient(to right, #6dd5ed, #2193b0); */   
-    background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+  .left{ grid-area:left; 
+    background-image: linear-gradient( 76.3deg,  #2c3e4e 12.6%, #456783 82.8% );
     }
     /*barra lateral derecha*/
-.right{ grid-area:right; /*background: #2193b0;  
-    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0); 
-    background: linear-gradient(to right, #6dd5ed, #2193b0); */
-    background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+.right{ grid-area:right; 
+    background-image: linear-gradient( 76.3deg,  #2c3e4e 12.6%, #456783 82.8% );
      }
 /*pie de la página*/
 .bottom{ grid-area: bottom;
@@ -163,27 +173,22 @@ display: flex;
 justify-content: center;
 margin-bottom: 1rem;
 box-shadow: 0.625rem 0.313rem 0.313rem #000000; 
-
 }
-
-
 .grid-prom {
     display: grid;
     
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr 20%;
-    gap: 10px;
-   
-   
-  }
+    gap: 0.625rem;
+   }
   
   .grid-item {
-   background: #bc4e9c;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #f80759, #bc4e9c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 10px;
+   background: #bc4e9c; 
+   background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);  
+   background: linear-gradient(to right, #f80759, #bc4e9c); 
+    padding: 0.625rem;
     text-align: start;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     
     
     }
@@ -199,9 +204,9 @@ box-shadow: 0.625rem 0.313rem 0.313rem #000000;
 /* Estilo del formulario*/
 form{
     margin-top: 3rem;
-    padding: 10px;
-    color:white;
-    border:2px solid #D3D0CB;
+    padding: 0.625rem;
+    color:#ffffff;
+    border:0.125rem solid #D3D0CB;
     background: #4B79A1;  
     background: -webkit-linear-gradient(to right, #283E51, #4B79A1);  
     background: linear-gradient(to right, #283E51, #4B79A1); 
