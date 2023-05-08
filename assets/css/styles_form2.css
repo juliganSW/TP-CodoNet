@@ -58,7 +58,6 @@ body{
   width: 20rem;
 }
 
-
 nav input[type="checkbox"] {
   display: none;
 }
@@ -67,6 +66,7 @@ nav label {
   display: none;
   cursor: pointer;
 }
+
 /*queries para pantallas pequeñas*/
   @media only screen and (max-width: 768px) {
   nav ul {
