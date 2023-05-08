@@ -68,7 +68,7 @@ nav label {
   cursor: pointer;
 }
 /*queries para pantallas pequeñas*/
-@media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
   nav ul {
     display: none;
     position: absolute;
@@ -110,48 +110,75 @@ nav label {
 
   .fa-bars {
     display: block;
-  }
-  .title {
-    display: none;
-  }
+  } 
 }
-
+   
 /* Contenedor grid */
 /* configuración para dispositivos de mayor tamaño     */
-
 .container {
     display: grid;
-
-/* Se definen tres filas / tres columnas */
-    grid-template: 3.75rem 1fr  3.75rem / 5% auto 5%;
+    /* Se definen tres filas / tres columnas */
+    grid-template: 3.75rem  1fr  3.75rem / 5% auto 5%;
 
 /* Distribucion el contenido en cada fila */
     grid-template-areas: "above above above"
                          "left middle right"
                          "bottom bottom bottom";
     gap: 2.188rem
+    
 }
 
-
 /*Nombre y color de cada area del grid */
-
-.above{grid-area:above; 
+.above {grid-area:above; 
   background-image: linear-gradient( 76.3deg,  #2c3e4e 12.6%, #456783 82.8% );
   
   }
   .above{
+    display: grid;
     text-align: center;
     color: #fffffffc;
-    text-shadow: #000000 0.1em 0.1em 0.1em;
+    text-shadow: #ffffff 0.2em 0.2em 0.2em;
     box-shadow: 0.625rem 0.313rem 0.313rem #000000;
     
   }
   .above h2 {
     font-size: 3rem;
   }
+/*Efecto fade en "Pasate a Codo-Net"*/
+  .superText{
+    animation: fadeIn 7s;
+    -webkit-animation: fadeIn 7s;
+    -moz-animation: fadeIn 7s;
+    -o-animation: fadeIn 7s;
+    -ms-animation: fadeIn 7s;
+  }
   
-
-/* color de la fuente del área del medio*/
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* color de la fuente del área del medio*/
 .middle{
     color:#7fffd4;
 }
@@ -213,7 +240,28 @@ form{
     
     }
 
-    
+    @media only screen and (max-width:600px){
+      .above {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-image: none;
+        box-shadow: none;
+      }
+      .above h2{
+        font-size:2rem
+
+      }
+      }
+      
+   @media only screen and (max-width: 600px) {
+      .grid-prom {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(6, 1fr);
+      }
+  }
+   
     /***********************************************************************************************/
       
     
