@@ -1,4 +1,12 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+  padding: 0;
+}
+
+
 body{
+  font-family: Arial, sans-serif;
     background-image: linear-gradient(to right, #434343 0%, black 100%);
     }
 
@@ -122,20 +130,19 @@ nav {
     background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); 
     
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1.25rem;
+    gap: 1.25rem;
+    padding: 30px;
     color:#ffffff;
     
   }
 .grid-wifi .column-1 {
     text-align: center;
-   
-    }
-
- 
-.grid-wifi img {
+   }
+ .grid-wifi img {
     max-width: 100%;
-    
-}
+    margin-bottom: -2.1rem;
+    margin-left: 6rem;
+   }
 
 .grid-wifi h1 {
     font-size: 3rem;
@@ -155,6 +162,7 @@ nav {
     text-decoration: none;
     border-radius: 50px;
     margin-left: 1rem;
+    margin-top: 2rem;
    }
 
   .button:hover {
@@ -223,14 +231,14 @@ nav {
   
   .grid-wifi2{
        display:grid;
-       grid-template: repeat(4,1fr) / repeat(3,1fr);
+       grid-template: repeat(4,5.5rem) / repeat(3,1fr);
        grid-template-areas: "primero primero primero"
        "segundo segundo segundo"
        "izquierda centro derecha"
        "izquierda2 centro2 derecha2";
 
        gap: 30px;
-        color:#ffffff;
+        color:#ffffff8d;
        
        
       }
@@ -238,6 +246,7 @@ nav {
   .primero{ grid-area: primero;
         display: flex;
         justify-content: center;
+        margin-top: 1rem;
         
         
       }
@@ -251,10 +260,12 @@ nav {
         justify-content: center;
         text-align: center;
        
-    }
+  }
     .grid-item img{
         display: flex;
         align-items:center;
+        width:25%
+
     }
    
 
@@ -268,7 +279,83 @@ nav {
 .grid-wifi2 h3 {
     font-size:1.5rem;
   }
+
+  .grid-movil {
+    
+    display: grid;
+    flex-wrap: wrap;
+    background: #606c88;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    padding: 50px;
+    color:#ffffff;
+    
+  }
+.grid-movil .column-1 {
+    text-align: start;
+   }
+   .grid-movil.column-2{
+    display: flex;
+    align-items: end;
+   }
+
+
+.grid-movil h1 {
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.grid-movil h2 {
+    font-size:2.5rem;
+    
+}
+.grid-movil img{
+  width: 70%;
+  display: flex;
+ margin-left:10rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    
+    background-color:white;
+    color:#0082c8;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-left: 1rem;
+    margin-top: 2rem;
+   }
+
+  .button:hover {
+    background-color: #666;
+  }
+  .grid-movil2 {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2,30rem); 
+    column-gap: 4px;
+    justify-content: center; 
+    color:#ffffff8f;
+    
+  }
+
+  .plan {
+    padding: 10px; 
+    border: 2px solid #800080;
+    }
+    .plan hr{
+      border-color:#800080
+    }
   
+   
+    
+  
+
 
   
   
