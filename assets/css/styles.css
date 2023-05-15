@@ -1,28 +1,14 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+
 body {
   background-image: linear-gradient(to right, #434343 0%, black 100%);
-  font-family: Arial, sans-serif;
-	
-  
-}
+  font-family: 'PT Sans', sans-serif;
+ }
 
-/*Esto está comentado porque era el fondo anterior, ahora está con background de prueba oscuro*/
-/* body {
-    background: #667db6;
-    background: -webkit-linear-gradient(
-      to right,
-      #667db6,
-      #0082c8,
-      #0082c8,
-      #667db6
-    ); 
-    background: linear-gradient(
-      to right,
-      #667db6,
-      #0082c8,
-      #0082c8,
-      #667db6
-    ); 
-  } */
 
 /* cabecera con barra de navegacion*/
 header {
@@ -35,7 +21,7 @@ header {
   
 }
 
-/*Efecto typing en el comienzo de la página*/
+/*Efecto typing en el comienzo de la página*/ /*ANIMACION*/
  .title {
   width: 0;
   overflow: hidden;
@@ -104,7 +90,7 @@ ul li a:hover {
   border-radius: 5px;
   }
 
-/*desplazamiento del menú en la barra de navegacion*/
+/*desplazamiento del menú en la barra de navegacion*/ /*ANIMACION CON JS*/
   .slide {
     animation-duration: 3s;
     animation-name: slidein;
@@ -112,7 +98,7 @@ ul li a:hover {
   
   @keyframes slidein {
     from {
-      margin-left: 57%;
+      margin-left: 67%;
       
     }
     to {
@@ -120,7 +106,7 @@ ul li a:hover {
       }
   }
 
- /*logo Codo-Net*/
+ /*logo Codo-Net*/ /*CON TRANSICION*/
 .logo {
   margin-left:-8rem;
   width: 20rem;
@@ -133,6 +119,7 @@ ul li a:hover {
   transition: 0.5s;
 }
 
+/*ckeck para menú hamburguesa que no es visible*/
 nav input[type="checkbox"] {
   display: none;
 }
@@ -183,21 +170,23 @@ nav label {
     z-index: 1;
   }
 
+/*barras del menú hamburguesa que ahora son visibles*/
   .fa-bars {
     display: block;
   }
+
+  /*la animacion typing ya no es visible*/
   .title {
     display: none;
   }
+
+  /*La animacion slide , ahora es rápida*/
   .slide{
     animation-duration: .1s;
     animation-name: slidein;
   }
     
 }
-
-  
-
 
 /*****************************************************************************/
 /*carrusel sin bootstrap que funciona y es automático*/
@@ -225,8 +214,6 @@ nav label {
   border-radius: 0.625rem;
   box-shadow: 0.313rem 0.313rem 0.313rem #ffffffcc;
 }
-
-
 @keyframes slide {
   0% {
     margin-left: 0;
@@ -274,6 +261,7 @@ nav label {
   color: #fffffffc;
   text-shadow: #000000 0.1em 0.1em 0.1em;
   box-shadow: 0.625rem 0.313rem 0.313rem #000000;
+  border-radius: 10px;
   opacity: 0.6;
 }
 .above h2 {
@@ -426,8 +414,9 @@ nav label {
   color: #ffffff;
   -webkit-text-stroke: 0.125rem #000000; /*le agrega un borde al texto*/
   border-radius: 1.25rem;
+  font-family: 'Lilita One', cursive;
   
-  font-family: "Lilita One", cursive;
+ 
   opacity: 0.8;
 }
 
@@ -460,6 +449,7 @@ nav label {
   height: 15.625rem;
   border-radius: 1.25rem;
   font-family: "Lilita One", cursive;
+  
   opacity: 0.8;
 }
 .grid-app img {
@@ -483,6 +473,7 @@ nav label {
   height: 15.625rem;
   border-radius: 1.25rem;
   font-family: "Lilita One", cursive;
+  
   opacity: 0.8;
 }
 .grid-sim img {
@@ -490,8 +481,18 @@ nav label {
   border:0.063rem solid #000000;
   }
 
+  /*efecto opaco en las imagenes de la seccion grid-avert, grid-add y grid-sim*/
+  .grid-advert.picture {
+    opacity: 1;
+    transition: opacity 0.5s ease; 
+  }
+  
+  .picture:hover {
+    opacity: 0.7; 
+  }
+
 /*queries pantallas pequeñas*/
-  @media screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px) {
     .grid-advert {
     grid-template-columns: 1fr;
     height: auto;
@@ -523,7 +524,7 @@ nav label {
 
     }
     /*queries pantallas medianas*/
-    @media screen and (min-width: 600px) and (max-width: 1024px) {
+    @media only screen and (min-width: 600px) and (max-width: 1024px) {
     .grid-advert {
     grid-template-columns: 1fr 1fr ;
     height: auto;
@@ -639,6 +640,7 @@ footer {
 .copyright {
   display: flex;
   justify-content: center;
+  
 }
 
 /*íconos de las redes sociales en el footer*/
@@ -662,6 +664,7 @@ footer {
 /*opciones de descarga de app en footer*/
 .app {
   margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 
 /*queries para pantallas pequeñas*/
@@ -758,12 +761,6 @@ footer {
   text-align: center;
 }  
  }
-
-
-
-
-
-
 /****************************************************************************************/
 
 

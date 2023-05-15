@@ -1,0 +1,47 @@
+
+
+
+{
+  "cliente": [
+    {
+      "id":"1",
+      "Nombre": "Roberto",
+      "Apellido": "Gómez",
+      "Edad": "35",
+      "DNI": "33254698",
+      "Ciudad": "CABA",
+
+      "Direccion":{ 
+        "calle": "Viamonte",
+        "número":"1234"
+        },
+
+      "CodigoPostal": "1422",
+      "Telefono": "1169856563",
+      "email": "gomez_roberto@gmail.com"
+    }
+  ],
+
+  "cliente2": [
+    {
+      "id":"2",
+      "Nombre": "Luciana",
+      "Apellido": "Rosati",
+      "Edad": "28",
+      "DNI": "38569874",
+      "Ciudad": "Luján",
+
+      "Direccion":{ 
+        "calle": "Dorrego",
+        "número":"4321"
+        },
+
+      "CodigoPostal": "2214",
+      "Telefono": "1156332211",
+      "email": "Luciro@gmail.com"
+    }
+  ]
+}
+
+   
+  

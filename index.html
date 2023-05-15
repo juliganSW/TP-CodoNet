@@ -14,7 +14,12 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!--Link Kit de fontawesome-->
     <script src="https://kit.fontawesome.com/45d21db9a0.js" crossorigin="anonymous"></script>
-
+   <!--fuente de google fonts principal-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+   
+    <!--fuente de goolge fonts secundaria-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Lilita+One&display=swap" rel="stylesheet">
@@ -31,16 +36,16 @@
         <nav>
             <a href="index.html"><img src="./assets/img/xXWDpM4Z5GVi_400_200.png" class="logo" width=""
                     alt="logoEmpresa"></a>
+                  
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle"><i class="fas fa-bars"></i></label>
 
 
             <ul class="nav-menu slide">
-                <li><i class="fa-solid fa-house" style="display: inline;"></i>&nbsp;<a href="index.html">Inicio</a>
-                </li>
-                <li>&nbsp;<a href="./prod.html">Servicios</a></li>
-                <li><a href="./codo-net.html">Planes</a></li>
-                <li><a href="formulario2.html" target="_blank">Portabilidad</a></li>
+                <li><i class="fa-solid fa-house" style="display: inline;"></i>&nbsp;<a href="index.html">Inicio</a></li>
+                <li><i class="fa-solid fa-cart-shopping" style="display: inline;"></i>&nbsp;<a href="./prod.html" target="_blank">Servicios</a></li>
+                <li> <i class="fa-solid fa-file-lines" style="display: inline;"></i>&nbsp;<a href="./codo-net.html" target="_blank">Planes</a></li>
+                <li><i class="fa-solid fa-sim-card" style="display: inline;"></i>&nbsp;<a href="formulario2.html" target="_blank">Portabilidad</a></li>
             </ul>
         </nav>
     </header>
@@ -84,7 +89,7 @@
             </div>
         </div>
        <section class="grid-advert">
-            <div>
+            <div class="picture">
                 <h1>5G<span style=" display:inline-block;"><img src="assets/img/wifi.png" class="wifi-icon"
                             alt="wifiIcon" width="65%"></span></h1>
             </div>
@@ -99,10 +104,10 @@
        <section class="grid-app">
             <div></div>
           <div class="">
-                <h1> DESCARGÁ LA APP DE <b><i>CODO-NET</i></b></h1>
+                <h1> DESCARGÁ LA APP DE <b style="color: #00000059;"><i>CODO-NET</i></b></h1>
                 <h3>PAGÁ TU FACTURA Y REALIZÁ TUS GESTIONES SIN MOVERTE DE TU CASA</h3>
             </div>
-            <div class="">
+            <div class="picture">
                 <img src="assets/img/undraw_Mobile_application_re_13u3.png" width="45%" alt="">
                 <div>
               </div>
@@ -113,11 +118,11 @@
       <section class="grid-sim">
             <div></div>
             <div class="">
-                <h1>PEDÍ TU <b style="color: #00000059;">CHIP PREPAGO</b></h1>
+                <h1>PEDÍ TU <b style="color: #00000059;"><i>CHIP PREPAGO</i></b></h1>
 
                 <h3>¡Y OBTENÉ MÚLTIPLES BENEFICIOS EN TODAS TUS RECARGAS!</h3>
            </div>
-            <div class="">
+            <div class="picture">
                 <img src="assets/img/20945319.jpg" width="50%" alt="">
                 <div>
                     <h4 style="display: inline-block;"><img src="assets/img/bolt (1).png">&nbsp;ENVÍO GRATIS</h4>
@@ -182,7 +187,7 @@
                     <a href="https://www.apple.com/store" target="_blank"><img src="assets/img/app-store-min.png"
                             alt="appleStoreLogo"></a>
                 </div>
-                <div class="qrCode mt-4">
+                <div class="qrCode">
                     <img src="assets/img/qrCode.png" alt="qrCode" width="25%">
 
                 </div>
@@ -193,6 +198,7 @@
             <div></div>
             <div></div>
         </div>
+
         <div class="line"></div>
         <div class="copyright">
             <small>Los servicios que presta Codo-Net S.A. están sujetos a disponibilidad técnica y geográfica dentro del

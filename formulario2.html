@@ -14,6 +14,10 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <!--Link Kit de fontawesome-->
     <script src="https://kit.fontawesome.com/45d21db9a0.js" crossorigin="anonymous"></script>
+      <!--fuente de google fonts principal-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,8 +31,10 @@
                 <li>
                     <i class="fa-solid fa-house" style="display: inline"></i>&nbsp;&nbsp;<a href="index.html">Inicio</a>
                 </li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Planes</a></li>
+                <li>
+                    <i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;<a href="">Servicios</a></li>
+                <li>
+                    <i class="fa-solid fa-file-lines"></i>&nbsp;&nbsp;<a href="./codo-net.html">Planes</a></li>
             </ul>
         </nav>
     </header>
@@ -49,7 +55,7 @@
                 <h1 style="text-align: center">PORTABILIDAD:</h1>
                 <h2>Formá parte de la experiencia Codo-Net</h2>
                 <h2>
-                    Te bonificamos con un 50% OFF + 10GB extras durante los primeros 12
+                    Te bonificamos con un <span class="discount">50% OFF + 10GB</span> extras durante los primeros 12
                     meses
                 </h2>
                 <h3>
@@ -94,28 +100,38 @@
             </section>
 
             <!--Formulario-->
-            <form>
+            <form id="form" onsubmit="validarFormulario(event)">
                 <div class="mb-3">
-                    <label for="exampleInputName" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="exampleInputName" placeholder="Escriba aqui..." />
+                    <label for="exampleInputName" class="form-label">Nombre<span class="asterisk">&nbsp;*</span>&nbsp;:</label>
+                    <input type="text" class="form-control" id="name" maxlength="80" placeholder="Escriba aqui..."/>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputLastName" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="exampleInputLastName" placeholder="Escriba aqui..." />
+                    <label for="exampleInputLastName" class="form-label">Apellido<span class="asterisk">&nbsp;*</span>&nbsp;:</label>
+                    <input type="text" class="form-control" id="lastName" maxlength="80"  placeholder="Escriba aqui..." />
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Escriba aqui..." />
-                    <div id="emailHelp" class="form-text"></div>
+                    <label for="exampleInputAge" class="form-label">Edad<span class="asterisk">&nbsp;*</span>&nbsp;:</label>
+                    <input type="text" class="form-control" id="edad" maxlength="2" placeholder="Escriba aqui..." />
+                    <p>Debe ser mayor de 18 años</p>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputDni" class="form-label">DNI<span class="asterisk">&nbsp;*</span>&nbsp;:</label>
+                    <input type="text" class="form-control" id="dni" placeholder="Escriba aqui..." />
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email<span class="asterisk">&nbsp;*</span>&nbsp;:</label>
+                    <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
+                        placeholder="Escriba aqui..."/>
+                      
+                   
                 </div>
                 <div class="mb-4">
-                    <label for="exampleInputPhone" class="form-label">Teléfono de contacto</label>
-                    <input type="text" class="form-control" id="exampleInputPhone" placeholder="Escriba aqui..." />
-                    <div id="phoneHelp" class="form-text"></div>
+                    <label for="exampleInputPhone" class="form-label">Teléfono de contacto<span class="asterisk">&nbsp;*</span>&nbsp;:</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Escriba aqui..."/>
+                    <p>Ej: 1126533009235</p>
                 </div>
-                <div class="input-group mb-4">
-                    <select class="form-select" id="inputGroupSelect02">
+                <div class="input-group-company mb-4">
+                    <select class="form-select" name="company">
                         <option selected>Compañia actual</option>
                         <option value="1">Claro</option>
                         <option value="2">Movistar</option>
@@ -123,17 +139,22 @@
                         <option value="3">Tuenti</option>
                     </select>
                 </div>
-                <div class="input-group mb-3">
-                    <select class="form-select" id="inputGroupSelect02">
-                        <option selected>Elija su plan</option>
+                <div class="input-group-plan mb-3" >
+                    <select class="form-select" name="plan">
+                        <option selected>Elija el plan de su interés</option>
                         <option value="1">Plan 1</option>
                         <option value="2">Plan 2</option>
                         <option value="3">plan 3</option>
+                        <option value="3">plan 4</option>
+                        <option value="3">plan 5</option>
+                        <option value="3">plan 6</option>
                     </select>
                 </div>
-                <button class="btn btn-outline-light" (click)="form.reset()">
-                    Reset
-                </button>
+               <p>Los campos con asteriscos(<span class="asterisk">*</span>) son obligatorios</p>
+               <br>
+               <input type="checkbox" name="terminos" id="checkbox"> Acepto los Términos y Condiciones
+               <br><br>
+                <button type="reset"class="btn btn-outline-light">Reset</button>
                 <button type="submit" class="btn btn-outline-light">Enviar</button>
             </form>
         </div>
@@ -141,6 +162,7 @@
         <div class="right">
             <aside></aside>
         </div>
+      
 
         <!--pie de página-->
         <div class="bottom">
@@ -152,6 +174,8 @@
 
     <!--link para Javascrip-->
     <script src="./js/nav.js"></script>
+    <script src="./js/validation_two.js"></script>
+    <script src="./js/api.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>

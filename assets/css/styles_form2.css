@@ -6,7 +6,7 @@
 
 body{
     background-image: linear-gradient(to right, #434343 0%, black 100%);
-    font-family: Arial, sans-serif;
+    font-family: 'PT Sans', sans-serif;
 	
     }
 
@@ -16,14 +16,14 @@ body{
       left: 0;
       z-index: 100;
       background-image: linear-gradient(to right, #434343 0%, #000000 100%);
-      scroll-snap-align: start;
+     
     }
     nav {
       margin-top: 1rem;
       margin-bottom: 2rem;
       display: flex;
       width: 100%;
-      height: 6.5rem; /*anterior era 7.813rem*/
+      height: 6.5rem; 
       justify-content: space-around;
       align-items: center;
       padding: 0 1.25rem;
@@ -53,7 +53,9 @@ body{
     
     ul li a:hover {
       color: #ffffff;
-    }
+      background-color:#267ab22c;
+      border-radius: 5px;
+      }
     /*logo Codo-Net*/
 .logo {
   margin-left:-8rem;
@@ -135,12 +137,12 @@ nav label {
   background-image: linear-gradient( 76.3deg,  #2c3e4e 12.6%, #456783 82.8% );
   
   }
-  .above{
-    display: grid;
-    text-align: center;
-    color: #fffffffc;
-    text-shadow: #ffffff 0.2em 0.2em 0.2em;
-    box-shadow: 0.625rem 0.313rem 0.313rem #000000;
+.above{
+  display: grid;
+  text-align: center;
+  color: #fffffffc;
+  text-shadow: #ffffff 0.2em 0.2em 0.2em;
+  box-shadow: 0.625rem 0.313rem 0.313rem #000000;
     
   }
   .above h2 {
@@ -148,6 +150,7 @@ nav label {
   }
 /*Efecto fade en "Pasate a Codo-Net"*/
   .superText{
+    
     animation: fadeIn 7s;
     -webkit-animation: fadeIn 7s;
     -moz-animation: fadeIn 7s;
@@ -218,9 +221,8 @@ box-shadow: 0.625rem 0.313rem 0.313rem #000000;
     padding: 0.625rem;
     text-align: start;
     border-radius: 0.625rem;
-    
-    
     }
+
     .grid-item h1{
         font-size: 3rem;
         color:#ffd166;
@@ -228,6 +230,13 @@ box-shadow: 0.625rem 0.313rem 0.313rem #000000;
     .grid-item h5 {
         text-align: center;
         color:#000000a7;
+
+    }
+    .discount{
+     
+      border: 1px solid none;
+      border-radius: 10px;
+      background-color:  #c54160;
     }
     
 /* Estilo del formulario*/
@@ -239,8 +248,15 @@ form{
     background: #4B79A1;  
     background: -webkit-linear-gradient(to right, #283E51, #4B79A1);  
     background: linear-gradient(to right, #283E51, #4B79A1); 
-    
     }
+    
+    /*asterisco en las labels*/
+    .asterisk {
+      color: red;
+    }
+   
+   
+    
 
     @media only screen and (max-width:600px){
       .above {
@@ -267,7 +283,5 @@ form{
     /***********************************************************************************************/
       
     
-          
-          
-          
+   
 
