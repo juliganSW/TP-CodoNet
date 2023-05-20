@@ -1,5 +1,19 @@
-let url="https://jsonplaceholder.typicode.com/users";//se define url y se referencia de donde van a venir los datos
-      fetch (url)//se realiza la peticion  
-      .then(response=> response.json())//la respuesta se dá en formato Json
-      .then(data=> console.log(data))//se lee data y se muestra por consola
-      .catch(error=> console.log(error))// si hay un error se "atrapa"en la palabra reservada catch
+let url = "https://jsonplaceholder.typicode.com/users";
+
+const searchData=()=>
+fetch(url)
+  .then(response => response.json())
+  .then(data => mostrarDatos(data))
+  .catch(error => console.log(error));
+
+
+const mostrarDatos = (data) => {
+  console.log(data);
+  let body = '';
+  for (let i = 0; i < data.length; i++) {
+    body += `<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].username}</td><td>${data[i].address.city}</td><td>${data[i].address.zipcode}</td></tr>`;
+  }
+  
+  document.getElementById("data").innerHTML = body;
+  
+}

@@ -10,7 +10,7 @@ function validarFormulario(event) {
   let email = document.getElementById("email").value.trim();
   let checkbox = document.getElementById('checkbox');
   
-  /* con la compañía y el tipo de plan no hace falta hacer un getElement ni validar */
+  
 
   // Validar que los campos no estén vacíos
   if (nombre === "" || apellido === "" || telefono === "" || dni === "" || email === "" || edad==="" || checkbox==="") {

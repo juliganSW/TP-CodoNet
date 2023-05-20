@@ -1,0 +1,21 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+
+body {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  font-family: 'PT Sans', sans-serif;
+  color: antiquewhite;
+ }
+
+
+
+
+#map{
+    margin:auto;
+    height: 80vh;
+    width: 100vw;
+    box-shadow:0 0 10px 0  #ffffffcc;
+}

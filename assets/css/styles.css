@@ -180,7 +180,7 @@ nav label {
     display: none;
   }
 
-  /*La animacion slide , ahora es rápida*/
+  /*La animacion slide, ahora es rápida*/
   .slide{
     animation-duration: .1s;
     animation-name: slidein;
@@ -243,12 +243,20 @@ nav label {
     margin-left: -300%;
   }
 }
+
 /*banner final del carrusel. Ideal ajustar las imagenes a 1708px x 562px
  o el equivalente en rem*/
 .downloadApp {
   width: 106.75rem;
   height: 35.125rem;
   background-color: #4f5c63;
+}
+/*media queries para pantallas extra pequeñas*/ /*acá quitamos el carrusell porque se vé muy chico */
+@media only screen and (max-width: 480px) {
+  .slider-frame {
+    display: none;
+    
+  }
 }
 
 /*************************************************************************************/
@@ -271,12 +279,15 @@ nav label {
 @media only screen and (max-width: 768px) {
   .grid-container {
     grid-template-columns: 0.5fr;
+    
   }
 
  .above h2 {
     font-size: 2rem;
+    margin-top: 1rem;
   }
 }
+
 
 /*contenido de la página en donde estan las ilustraciones*/
 .grid-container {

@@ -1,0 +1,362 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+  }
+  
+  header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-image: linear-gradient(to right, #434343 0%, #000000 100%);
+  }
+  /*barra de navegacion*/
+  nav {
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    height: 6.5rem; 
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1.25rem;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    font-size: 1.2rem;
+    color: #00ffff;
+    box-shadow: 0.625rem 0.313rem 0.313rem #000000;
+  }
+  
+  /*lista del menú de navegacion*/
+  ul {
+    display: flex;
+    margin: 0rem;
+    padding: 6.25rem;
+  }
+  
+  ul li {
+    list-style: none;
+    margin: 0 1.563rem;
+  }
+  
+  ul li a {
+    color: #00ffff;
+    text-decoration: none;
+    border: 1px solid #ffffff02;
+  }
+  
+  ul li a:hover {
+    color: #ffffff;
+    background-color: #267ab22c;
+    border-radius: 5px;
+  }
+  
+  /*logo Codo-Net*/
+  .logo {
+    margin-left: -8rem;
+    width: 20rem;
+    cursor: pointer;
+    transition: 1s;
+  }
+  nav input[type="checkbox"] {
+    display: none;
+  }
+  
+  nav label {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /*queries para pantallas pequeñas*/
+  @media only screen and (max-width: 768px) {
+    nav ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #0f0c29;
+      background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+      background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+      padding: 1rem;
+      box-shadow: 0 0.125rem 0.313rem #00000033;
+    }
+  
+    nav li {
+      margin: 0;
+      text-align: center;
+    }
+  
+    nav a {
+      display: block;
+      font-size: 1.2rem;
+      padding: 0.5rem 0;
+    }
+  
+    input[type="checkbox"]:checked ~ ul {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    nav label {
+      display: block;
+      font-size: 2rem;
+      cursor: pointer;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1;
+    }
+  
+    .fa-bars {
+      display: block;
+    }
+  }
+  
+  section.services {
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
+	padding: 50px 0;
+	
+}
+
+section.services h2 {
+	font-size: 2.5rem;
+	margin-bottom: 50px;
+	text-align: center;
+	color:#ffffff
+}
+
+section.services .service {
+	background-color: #00dbde;
+	background-color: #00dbde;
+	background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+	border: 1px solid #ddd;
+	padding: 30px;
+	text-align: center;
+}
+
+section.services .service i {
+	font-size: 3rem;
+	
+}
+
+section.services .service h3 {
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+
+section.services .service p {
+	font-size: 1.5rem;
+	margin-bottom: 20px;
+}
+.grid-wifi2 {
+    display: grid;
+    grid-template: repeat(4, 5.5rem) / repeat(3, 1fr);
+    grid-template-areas:
+      "primero primero primero"
+      "segundo segundo segundo"
+      "izquierda centro derecha"
+      "izquierda2 centro2 derecha2";
+  
+    gap: 30px;
+    color: #ffffff8d;
+  }
+  
+  .primero {
+    grid-area: primero;
+    display: flex;
+    justify-content:center;
+    margin-top: 1rem;
+   
+    
+  }
+  
+  .segundo {
+    grid-area: segundo;
+    
+    display: flex;
+    justify-content:center;
+    
+   
+  }
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .grid-item img {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+  }
+  
+  .grid-wifi2 h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .grid-wifi2 h3 {
+    font-size: 1.5rem;
+  }
+  .grid-tv2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 20rem);
+    column-gap: 5px;
+    justify-content: center;
+    color: #ffffff8f;
+  }
+  
+  .grid-tv2 h1 {
+    font-size: 2rem;
+    color: white;
+  }
+
+  .pack {
+    padding: 10px;
+    border: 2px solid #800080;
+    
+  }
+  .pack hr {
+    border-color: #800080;
+  }
+  .btn {
+    margin-top: 1rem;
+    background-color: #800080;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .btn:hover {
+    background-color: #0082c8;
+  }
+  .grid-movil2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 30rem);
+    column-gap: 4px;
+    justify-content: center;
+    color: #ffffff8f;
+  }
+  .grid-movil2 h1 {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .plan {
+    padding: 10px;
+    border: 2px solid #800080;
+  }
+  .plan hr {
+    border-color: #800080;
+  }
+
+  .grid-phone {
+    margin-top: -2rem;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.25rem;
+    padding: 50px;
+    color: #ffffff8f;
+  }
+  
+  .grid-phone.column-2 {
+    display: flex;
+    align-items: center;
+  }
+  .grid-phone h1 {
+    font-size: 2rem;
+    color: white;
+
+  }
+  .grid-phone h3 {
+    font-size: 1.3rem;
+    }
+
+ .t-phone {
+    padding: 10px;
+    border: 2px solid  #800080;
+   }
+
+  .t-phone hr {
+   border-color:  #800080;
+    
+  }
+  /*pie de la página*/
+.bottom{ grid-area: bottom;
+  background: #141E30;  
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);
+  background: linear-gradient(to right, #243B55, #141E30); 
+  color:#ffffff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0.625rem 0.313rem 0.313rem #000000; 
+  text-align: center;
+  }
+/*******************************************************************************************/
+/* Estilos para pantallas pequeñas*/
+		@media only screen and (max-width: 480px) {
+			.grid-wifi2{
+        display: block;
+      }
+      .grid-item{
+        display: none;
+      }
+      .grid-movil2 {
+        display: block;
+      }
+      .grid-tv2{
+        display:block;
+      }
+      .grid-phone{
+        display: block;
+      }
+      
+		}
+    
+		/* Estilos para pantallas medianas */
+		@media only screen and (min-width: 480px) and (max-width: 1024px) {
+			.grid-wifi {
+				display: block;
+			}
+			.grid-wifi2 {
+				display: block;
+        margin-bottom: 1rem;
+			}
+      .grid-item{
+        display: none;
+      }
+      .grid-movil2 {
+				display: block;
+			}
+      .grid-tv2{
+        display:block;
+      }
+      
+		}
+    
+    
+
+    
+
+
+    
+
+  
+  
+  

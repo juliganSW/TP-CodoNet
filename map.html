@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficinas</title>
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!--Hoja de estilos Css-->
+    <link rel="stylesheet" href="./assets/css/map.css">
+    <!--Link de la Api leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+</head>
+
+<body>
+    <h1>Visitá nuestras principales oficinas del país</h1>
+    <select name="select-location" id="select-location">
+        <option value="-1">Seleccione un lugar:</option>
+        <option value="-34.615803, -58.363476">Buenos Aires</option>
+        <option value="-34.9205, -57.9536">La Plata</option>
+        <option value="-31.4201, -64.188">Córdoba</option>
+        <option value="-32.9420, -60.6397">Rosario</option>
+        <option value="-38.0055, -57.5426">Mar del Plata</option>
+        <option value="-38.7196, -62.2654">Bahia Blanca</option>
+        <option value="-45.8641, -67.4966">Comodoro Rivadavia</option>
+    </select>
+    <div id="map"></div>
+
+
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="./js/map.js"></script>
+</body>
+
+</html>
